@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arvind Lesson</title>
+  </head>
+  <body>
+    <h1>HELLO SOMEONE</h1>
+
+    {% block content %}
+        {% load static %}
+        {% for product in object %}
+    <div>
+      <img src="{% static product.imageURL %}" alt="">
+    </div>
+
+    <div>
+      <p>Title of product is {{product.title}}</p>
+      <p>Description: {{product.description}}</p>
+      <p>Price: {{product.price}}</p>
+    </div>
+    {% endfor %}
+
+    {% endblock content %}
+
+  </body>
+</html>

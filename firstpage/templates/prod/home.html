@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arvind Lesson</title>
+  </head>
+  <body>
+    <h1>HELLO SOMEONE</h1>
+
+    {% block content %}
+        {% load static %}
+    <div>
+      <img src="{% static 'pizza.jpg' %}" alt="">
+    </div>
+
+    <div>
+      <p>Title of product is {{object.title}}</p>
+      <p>Description: {{object.description}}</p>
+      <p>Price: {{object.price}}</p>
+    </div>
+
+    <div>
+      <img src="{% static 'coffee.jpg' %}" alt="">
+    </div>
+
+    <div>
+      <p>Title of product is {{object1.title}}</p>
+      <p>Description: {{object1.description}}</p>
+      <p>Price: {{object1.price}}</p>
+    </div>
+
+
+    {% endblock content %}
+
+  </body>
+</html>

@@ -1,0 +1,71 @@
+:root {
+  --mainText: #383232; /* sortof black-brown color */
+  --secondaryText: #d8a059;
+
+  --mainColor: #eaeaea;
+  --secondaryColor: #ffff;
+
+  --borderColor: #c1c1c1;
+
+  --s2backgroundColor: #e0c8b3;
+  --buttonColor: black;
+
+  /*--mainFont: "Russo One", sans-serif;*/
+
+  --footerColor: #f4f5e6;
+}
+
+* {
+  margin-right: 30px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0px;
+  margin-left: 30px;
+  color: var(--mainText);
+}
+
+.page-title {
+  text-align: center;
+  margin: auto;
+  padding: auto;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.my-images {
+  width: 400px;
+  height: auto;
+}
+
+.prod-title {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+}

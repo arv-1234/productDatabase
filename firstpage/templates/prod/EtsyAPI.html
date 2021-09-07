@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static  %}
+<html>
+	<head>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+		<title>Arvind Lesson</title>
+
+		<link rel="stylesheet" type="text/css" href="{% static 'CSS/mystylesheet.css' %}">
+	</head>
+
+	<body>
+		<div class="item-wrapper">
+			<div class="page-title">
+				<h1 class="my-title"> Products Obtained From Etsy</h1>
+			</div>
+
+			{% block content %}
+				{% for product in APIproducts %}
+					<p class="prod-title"> Title of product is: {{ product.title }} </p>
+					<div class = "my-images">
+						<img src="{% static product.imageURL %}" class="img-fluid img-thumbnail" alt="...">
+						<!-- <img src="{% static product.imageURL %}" alt=""> -->
+						<!-- <img src="{{ product.imageURL }}" alt=""> -->
+						<!-- <img src="{% static 'camera.png' %}" alt=""> -->
+					</div>
+					<div>
+						<p><strong> Price:</strong> <i>${{ product.price }}</i> </p>
+						<p> Description: {{ product.description }} </p>
+						<span>
+							<button type="button" class="btn btn-primary"><a href="{{ product.productLink }}" target="_blank">Visit Seller</a></button>
+						</span>
+						<!-- <p> Title of product is {{ product.title }} </p> -->
+
+					</div>
+				{% endfor %}
+
+
+			{% endblock content %}
+		</div>
+
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	</body>
+</html>
